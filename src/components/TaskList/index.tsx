@@ -1,9 +1,12 @@
-import { CheckCircle2, Circle, Loader2 } from 'lucide-react'
+import { Loader2 } from 'lucide-react'
 import { Alert, AlertDescription } from '@src/shared/ui/alert'
 import { useLoadTodos } from '@src/components/TaskList/queries/useLoadTodos'
+import { TodosMutations } from '@src/components/TaskList/mutations'
+import { CheckCircleOrLoading } from '@src/components/TaskList/components/CheckCircleOrLoading'
 
 export default function TaskList() {
   const { data, isLoading, error } = useLoadTodos()
+  const updateTodoMutation = TodosMutations.usePatchTodo()
 
   if (isLoading) {
     return (
@@ -32,11 +35,20 @@ export default function TaskList() {
           }`}
         >
           <div className="flex items-start gap-3">
-            {task.completed ? (
-              <CheckCircle2 className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-            ) : (
-              <Circle className="h-5 w-5 text-muted-foreground mt-0.5 flex-shrink-0" />
-            )}
+            <span
+              className="cursor-pointer"
+              onClick={async () =>
+                await updateTodoMutation.patchTodo({
+                  id: task.id,
+                  payload: { completed: !task.completed },
+                })
+              }
+            >
+              <CheckCircleOrLoading
+                loading={updateTodoMutation.isLoading && updateTodoMutation.variables?.id === task.id}
+                completed={task.completed}
+              />
+            </span>
             <div>
               <p className={`${task.completed ? 'text-primary font-medium' : ''}`}>{task.title}</p>
               <p className="text-sm text-muted-foreground mt-1">{task.completed ? 'Completed' : 'In progress'}</p>
