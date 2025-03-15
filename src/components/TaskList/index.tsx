@@ -2,15 +2,17 @@ import { Loader2 } from 'lucide-react'
 import { Alert, AlertDescription } from '@src/shared/ui/alert'
 import { useLoadTodos } from '@src/components/TaskList/queries/useLoadTodos'
 import { TaskItem } from '@src/components/TaskList/components/TaskItem'
+import { useTranslation } from 'react-i18next'
 
 export default function TaskList() {
+  const { t } = useTranslation()
   const { data, isLoading, error } = useLoadTodos()
 
   if (isLoading) {
     return (
       <div className="flex justify-center items-center py-10">
         <Loader2 className="h-8 w-8 animate-spin text-primary" />
-        <span className="ml-2">Loading tasks...</span>
+        <span className="ml-2">{t('task:loading')}</span>
       </div>
     )
   }
@@ -18,7 +20,7 @@ export default function TaskList() {
   if (error) {
     return (
       <Alert variant="destructive">
-        <AlertDescription>Failed to load tasks. Please try again later.</AlertDescription>
+        <AlertDescription>{t('task:error')}</AlertDescription>
       </Alert>
     )
   }

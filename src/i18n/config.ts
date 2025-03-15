@@ -18,5 +18,5 @@ i18next
     fallbackLng: {
       default: ['en'],
     },
-    ns: ['translation', 'notFound'],
+    ns: ['translation', 'notFound', 'task'],
   })

@@ -1,0 +1,8 @@
+{
+  "title": "Task Manager",
+  "description": "View and manage your tasks with ease",
+  "loading": "Loading tasks...",
+  "error": "Failed to load tasks. Please try again later.",
+  "completed": "Completed",
+  "inProgress": "In progress"
+}
