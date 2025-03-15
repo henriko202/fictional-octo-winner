@@ -6,6 +6,7 @@ import { createRouter } from './router'
 import setupLocatorUI from '@locator/runtime'
 import { isDevEnvironment } from '@src/utils/isDevEnvironment'
 import { ThemeProvider } from '@src/components/Shared/ThemeProvider'
+import { Toaster } from '@components/ui/sonner'
 
 export default function App() {
   if (isDevEnvironment) {
@@ -18,6 +19,7 @@ export default function App() {
     <QueryClientProvider client={queryClient}>
       <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
         <RouterProvider router={createRouter()} />
+        <Toaster />
         {isDevEnvironment && <ReactQueryDevtools />}
       </ThemeProvider>
     </QueryClientProvider>

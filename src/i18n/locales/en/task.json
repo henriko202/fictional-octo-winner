@@ -4,5 +4,13 @@
   "loading": "Loading tasks...",
   "error": "Failed to load tasks. Please try again later.",
   "completed": "Completed",
-  "inProgress": "In progress"
+  "inProgress": "In progress",
+  "addTask": "Add Task",
+  "createTask": "Create Task",
+  "taskName": "Task Name",
+  "taskPlaceholder": "Enter your task name",
+  "taskDescription": "Task Description",
+  "save": "Save",
+  "cancel": "Cancel",
+  "todoCreated": "Todo created successfully!"
 }
