@@ -6,7 +6,7 @@ type TaskCompletedInfoProps = {
   task: Todo
 }
 
-export const TaskCompletedInfo = ({ task }: TaskCompletedInfoProps) => {
+export const TodoCompletedInfo = ({ task }: TaskCompletedInfoProps) => {
   const updateTodoMutation = TodosMutations.usePatchTodo()
 
   return (

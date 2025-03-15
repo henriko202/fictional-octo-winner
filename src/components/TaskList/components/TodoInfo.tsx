@@ -6,7 +6,7 @@ type TaskInfoProps = {
   task: Todo
 }
 
-export const TaskInfo = ({ task }: TaskInfoProps) => {
+export const TodoInfo = ({ task }: TaskInfoProps) => {
   const { t } = useTranslation()
 
   return (

@@ -1,9 +1,9 @@
 import { Loader2 } from 'lucide-react'
 import { Alert, AlertDescription } from '@src/shared/ui/alert'
 import { useLoadTodos } from '@src/components/TaskList/queries/useLoadTodos'
-import { TaskItem } from '@src/components/TaskList/components/TaskItem'
+import { Todotem } from '@src/components/TaskList/components/Todotem'
 import { useTranslation } from 'react-i18next'
-import { TaskAddButton } from '@src/components/TaskList/components/TaskAddButton'
+import { TodoAddButton } from '@src/components/TaskList/components/TodoAddButton'
 
 export default function TaskList() {
   const { t } = useTranslation()
@@ -29,9 +29,9 @@ export default function TaskList() {
   return (
     <div className="space-y-4">
       {data?.map((task) => (
-        <TaskItem key={task.id} task={task} />
+        <Todotem key={task.id} task={task} />
       ))}
-      <TaskAddButton />
+      <TodoAddButton />
     </div>
   )
 }

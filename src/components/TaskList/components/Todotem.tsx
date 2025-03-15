@@ -1,12 +1,12 @@
 import { Todo } from '@src/components/TaskList/domain/types/Todo'
-import { TaskCompletedInfo } from '@src/components/TaskList/components/TaskCompletedInfo'
-import { TaskInfo } from '@src/components/TaskList/components/TaskInfo'
+import { TodoCompletedInfo } from '@src/components/TaskList/components/TodoCompletedInfo'
+import { TodoInfo } from '@src/components/TaskList/components/TodoInfo'
 
 type TaskItemProps = {
   task: Todo
 }
 
-export const TaskItem = ({ task }: TaskItemProps) => {
+export const Todotem = ({ task }: TaskItemProps) => {
   return (
     <div
       className={`p-4 rounded-lg border transition-colors ${
@@ -14,8 +14,8 @@ export const TaskItem = ({ task }: TaskItemProps) => {
       }`}
     >
       <div className="flex items-start gap-3">
-        <TaskCompletedInfo task={task} />
-        <TaskInfo task={task} />
+        <TodoCompletedInfo task={task} />
+        <TodoInfo task={task} />
       </div>
     </div>
   )

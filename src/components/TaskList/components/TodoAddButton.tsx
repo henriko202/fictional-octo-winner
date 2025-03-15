@@ -1,7 +1,7 @@
 import { Button } from '@src/shared/ui/button'
 import { Plus } from 'lucide-react'
 
-export const TaskAddButton = () => {
+export const TodoAddButton = () => {
   return (
     <div className="flex justify-center items-center py-4">
       <Button

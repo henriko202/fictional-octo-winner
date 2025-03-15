@@ -2,7 +2,7 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@src/
 import TaskList from '@src/components/TaskList'
 import { useTranslation } from 'react-i18next'
 
-export const TaskContainer = () => {
+export const TodoContainer = () => {
   const { t } = useTranslation()
 
   return (
