@@ -1,5 +1,6 @@
 import React from 'react'
 import { LanguageSelector } from './LanguageSelector'
+import { ModeToggle } from '@src/components/Header/ThemeModeSelector'
 
 export function Header() {
   return (
@@ -9,6 +10,7 @@ export function Header() {
       </a>
       <div className="flex items-center gap-4">
         <LanguageSelector />
+        <ModeToggle />
       </div>
     </div>
   )
