@@ -15,7 +15,7 @@ export const TodoCompletedInfo = ({ task }: TaskCompletedInfoProps) => {
       onClick={async () =>
         await updateTodoMutation.patchTodo({
           id: task.id,
-          payload: { completed: !task.completed },
+          payload: { completed: !task.completed, isLocal: task.isLocal },
         })
       }
     >

@@ -5,14 +5,15 @@ import { AxiosError } from 'axios'
 
 type DeleteTodoParams = {
   id: number
+  isLocal?: boolean
 }
 
 export const useDeleteTodo = () => {
   const { cache } = useLoadTodos()
 
   const mutation = useMutation<number, AxiosError<void>, DeleteTodoParams>({
-    mutationFn: async ({ id }) => {
-      return await deleteTodo({ id })
+    mutationFn: async ({ id, isLocal }) => {
+      return await deleteTodo({ id, isLocal })
     },
     onSuccess: async (data) => {
       cache.remove([data])

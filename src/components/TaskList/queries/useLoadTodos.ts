@@ -36,6 +36,12 @@ export const useLoadTodos = () => {
           return oldData.filter((todo) => !ids.includes(todo.id))
         })
       },
+      add: (newTodo: Todo) => {
+        queryClient.setQueryData(TODOS_QUERY_KEY, (oldData: Todo[] | undefined) => {
+          if (!oldData) return [newTodo]
+          return [...oldData, newTodo]
+        })
+      },
     },
   }
 }

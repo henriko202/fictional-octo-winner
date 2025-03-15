@@ -13,7 +13,7 @@ export const TodoInfo = ({ task }: TaskInfoProps) => {
     <div className="flex flex-col gap-2 w-full">
       <div className="flex items-center gap-3 justify-between w-full">
         <p className={`${task.completed ? 'text-primary font-medium' : ''}`}>{task.title}</p>
-        <DeleteTodo id={task.id} />
+        <DeleteTodo id={task.id} isLocal={task.isLocal} />
       </div>
       <p className="text-sm text-muted-foreground mt-1">
         {task.completed ? t('task:completed') : t('task:inProgress')}
