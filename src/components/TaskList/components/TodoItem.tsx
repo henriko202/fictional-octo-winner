@@ -6,7 +6,7 @@ type TaskItemProps = {
   task: Todo
 }
 
-export const Todotem = ({ task }: TaskItemProps) => {
+export const TodoItem = ({ task }: TaskItemProps) => {
   return (
     <div
       className={`p-4 rounded-lg border transition-colors ${
