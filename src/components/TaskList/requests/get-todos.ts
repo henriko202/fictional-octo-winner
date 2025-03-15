@@ -1,6 +1,6 @@
 import axios from 'axios'
 import { GetTodosFilters } from '@src/components/TaskList/domain/types/GetTodosFilters'
-import { Task } from '@src/components/TaskList/domain/types/Task'
+import { Todo } from '@src/components/TaskList/domain/types/Todo'
 
 export type GetTodosRequest = {
   signal: AbortSignal | undefined
@@ -8,7 +8,7 @@ export type GetTodosRequest = {
 }
 
 export function loadTodos({ signal, filters }: GetTodosRequest) {
-  return axios.get<Task[]>('https://jsonplaceholder.typicode.com/todos', {
+  return axios.get<Todo[]>('https://jsonplaceholder.typicode.com/todos', {
     signal,
     params: filters,
   })
