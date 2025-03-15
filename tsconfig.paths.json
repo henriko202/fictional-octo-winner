@@ -1,0 +1,15 @@
+{
+  "compilerOptions": {
+    "paths": {
+      "@i18n/*": [
+        "./src/i18n/*"
+      ],
+      "@src/*": [
+        "./src/*"
+      ],
+      "@components/*": [
+        "./src/shared/*"
+      ]
+    }
+  }
+}
