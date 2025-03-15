@@ -7,7 +7,7 @@ export const TaskContainer = () => {
   return (
     <main className="container mx-auto py-10 px-4">
       <Card className="max-w-3xl mx-auto">
-        <CardHeader>
+        <CardHeader className="flex items-center justify-between">
           <CardTitle className="text-2xl">{t('task:title')}</CardTitle>
           <CardDescription>{t('task:description')}</CardDescription>
         </CardHeader>
