@@ -15,5 +15,6 @@
   "todoCreated": "Todo created successfully!",
   "todoDeleted": "Todo deleted successfully!",
   "todoUpdated": "Todo updated successfully!",
-  "warningLocalStorage": "Warning: Your task will be saved locally in your browser. If you clear your browser data, your task will be deleted."
+  "warningLocalStorage": "Warning: Your task will be saved locally in your browser. If you clear your browser data, your task will be deleted.",
+  "refreshData": "Refresh Data"
 }
