@@ -9,8 +9,11 @@
   "createTask": "Create Task",
   "taskName": "Task Name",
   "taskPlaceholder": "Enter your task name",
-  "taskDescription": "Task Description",
+  "taskDescription": "Minimum of 3 characters",
   "save": "Save",
   "cancel": "Cancel",
-  "todoCreated": "Todo created successfully!"
+  "todoCreated": "Todo created successfully!",
+  "todoDeleted": "Todo deleted successfully!",
+  "todoUpdated": "Todo updated successfully!",
+  "warningLocalStorage": "Warning: Your task will be saved locally in your browser. If you clear your browser data, your task will be deleted."
 }
