@@ -3,6 +3,7 @@ import { Alert, AlertDescription } from '@src/shared/ui/alert'
 import { useLoadTodos } from '@src/components/TaskList/queries/useLoadTodos'
 import { TaskItem } from '@src/components/TaskList/components/TaskItem'
 import { useTranslation } from 'react-i18next'
+import { TaskAddButton } from '@src/components/TaskList/components/TaskAddButton'
 
 export default function TaskList() {
   const { t } = useTranslation()
@@ -30,6 +31,7 @@ export default function TaskList() {
       {data?.map((task) => (
         <TaskItem key={task.id} task={task} />
       ))}
+      <TaskAddButton />
     </div>
   )
 }

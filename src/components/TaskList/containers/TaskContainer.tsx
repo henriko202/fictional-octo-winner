@@ -4,6 +4,7 @@ import { useTranslation } from 'react-i18next'
 
 export const TaskContainer = () => {
   const { t } = useTranslation()
+
   return (
     <main className="container mx-auto py-10 px-4">
       <Card className="max-w-3xl mx-auto">
