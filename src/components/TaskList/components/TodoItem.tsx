@@ -1,9 +1,9 @@
-import { Todo } from '@src/components/TaskList/domain/types/Todo'
 import { TodoCompletedInfo } from '@src/components/TaskList/components/TodoCompletedInfo'
 import { TodoInfo } from '@src/components/TaskList/components/TodoInfo'
+import { TodoObject } from '@src/components/TaskList/domain/models/Todo'
 
 type TaskItemProps = {
-  task: Todo
+  task: TodoObject
 }
 
 export const TodoItem = ({ task }: TaskItemProps) => {

@@ -2,6 +2,7 @@ import { useQuery, useQueryClient } from '@tanstack/react-query'
 import { loadTodos } from '@src/components/TaskList/requests/get-todos'
 import { DATE_CONSTANTS } from '@src/utils/constants/date'
 import { Todo } from '@src/components/TaskList/domain/types/Todo'
+import { TodoObject } from '@src/components/TaskList/domain/models/Todo'
 
 export const TODOS_QUERY_KEY = ['todos']
 
@@ -14,6 +15,7 @@ export const useLoadTodos = () => {
       const { data } = await loadTodos({ signal, filters: { _limit: 5 } })
       return data
     },
+    select: (data) => data.map((todo) => new TodoObject(todo.id, todo.title, todo.completed, todo.isLocal)),
     refetchInterval: DATE_CONSTANTS.TIME_IN_MILLISECONDS.MINUTE * 20,
     staleTime: DATE_CONSTANTS.TIME_IN_MILLISECONDS.MINUTE * 20,
   })

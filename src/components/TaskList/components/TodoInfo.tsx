@@ -1,9 +1,9 @@
 import { useTranslation } from 'react-i18next'
 import { DeleteTodo } from '@src/components/TaskList/components/DeleteTodo'
-import { Todo } from '@src/components/TaskList/domain/types/Todo'
+import { TodoObject } from '@src/components/TaskList/domain/models/Todo'
 
 type TaskInfoProps = {
-  task: Todo
+  task: TodoObject
 }
 
 export const TodoInfo = ({ task }: TaskInfoProps) => {
@@ -16,7 +16,7 @@ export const TodoInfo = ({ task }: TaskInfoProps) => {
         <DeleteTodo id={task.id} isLocal={task.isLocal} />
       </div>
       <p className="text-sm text-muted-foreground mt-1">
-        {task.completed ? t('task:completed') : t('task:inProgress')}
+        {task.isCompleted ? t('task:completed') : t('task:inProgress')}
       </p>
     </div>
   )
