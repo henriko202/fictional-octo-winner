@@ -30,6 +30,12 @@ export const useLoadTodos = () => {
           })
         })
       },
+      remove: (ids: number[]) => {
+        queryClient.setQueryData(TODOS_QUERY_KEY, (oldData: Todo[] | undefined) => {
+          if (!oldData) return oldData
+          return oldData.filter((todo) => !ids.includes(todo.id))
+        })
+      },
     },
   }
 }

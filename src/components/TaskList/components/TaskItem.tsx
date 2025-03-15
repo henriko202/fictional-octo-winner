@@ -15,7 +15,7 @@ export const TaskItem = ({ task }: TaskItemProps) => {
     >
       <div className="flex items-start gap-3">
         <TaskCompletedInfo task={task} />
-        <TaskInfo completed={task.completed} title={task.title} />
+        <TaskInfo task={task} />
       </div>
     </div>
   )
